@@ -808,6 +808,29 @@ body.no-motion *,body.no-motion *::before,body.no-motion *::after{animation:none
 @media(max-width:600px){.v9-profile-grid{grid-template-columns:1fr}.v9-full{grid-column:auto}.v9-box{padding:18px}.v9-menu-btn{top:10px;right:10px}}
 </style>
 
+<style id="darkino-v25-survey-style">
+  #v25SurveyPanel .v9-box{width:min(760px,96vw)}
+  .v25-poll{display:grid;gap:10px;margin:18px 0}
+  .v25-poll button{width:100%;text-align:right;padding:13px 15px;border:1px solid var(--line);background:var(--void-2);color:var(--bone);border-radius:12px;cursor:pointer;font:inherit;transition:.18s}
+  .v25-poll button:hover{border-color:var(--theme-a);transform:translateY(-1px)}
+  .v25-poll button.selected{border-color:var(--theme-a);background:color-mix(in srgb,var(--theme-a) 10%,var(--void-2))}
+  .v25-comment-form{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+  .v25-comment-form textarea{width:100%;min-height:100px;resize:vertical;padding:12px;border:1px solid var(--line);background:var(--void-2);color:var(--bone);border-radius:10px;font:inherit;box-sizing:border-box}
+  .v25-comment-form textarea:focus{outline:none;border-color:var(--theme-a)}
+  .v25-comment-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .v25-profile-badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--ash);font-size:11px}
+  .v25-comments{display:grid;gap:10px;margin-top:16px;max-height:42vh;overflow:auto}
+  .v25-comment{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:13px;padding:13px}
+  .v25-comment-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
+  .v25-comment-name{font-weight:800;color:var(--bone)}
+  .v25-comment-time{font-size:10px;color:var(--ash)}
+  .v25-comment-text{color:var(--ash);line-height:1.9;white-space:pre-wrap;word-break:break-word}
+  .v25-empty{padding:22px;text-align:center;color:var(--ash);border:1px dashed var(--line);border-radius:12px}
+  .v25-note{font-size:11px;color:var(--ash);line-height:1.8;margin-top:8px}
+  .v25-profile-required{padding:16px;border:1px solid color-mix(in srgb,var(--theme-b) 45%,var(--line));background:color-mix(in srgb,var(--theme-b) 6%,var(--panel));border-radius:13px}
+  .v25-profile-required strong{display:block;margin-bottom:6px;color:var(--bone)}
+  .v25-inline-btn{border:1px solid var(--theme-a);background:color-mix(in srgb,var(--theme-a) 10%,var(--panel));color:var(--bone);border-radius:10px;padding:9px 12px;cursor:pointer;font:inherit}
+</style>
 
 <style id="darkino-game-guide-style">
 .darkino-game-guides{max-width:1050px;margin:42px auto;padding:0 18px;font-family:inherit}
@@ -1037,8 +1060,8 @@ body.no-motion *,body.no-motion *::before,body.no-motion *::after{animation:none
 <nav class="mobile-nav" aria-label="ناوبری موبایل">
   <a href="#" class="active"><span class="mn-ic">🏠</span>خانه</a>
   <button type="button" id="mobileSearchBtn"><span class="mn-ic">🔎</span>جستجو</button>
-  <a href="dmc-guide.html"><span class="mn-ic">🎮</span>DMC</a>
-  <a href="#about"><span class="mn-ic">☰</span>بیشتر</a>
+  <button type="button" id="mobileSettingsBtn"><span class="mn-ic">⚙️</span>تنظیمات</button>
+  <button type="button" id="mobileSurveyBtn"><span class="mn-ic">📊</span>نظرسنجی</button>
 </nav>
 
 
@@ -2681,6 +2704,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="v9-menu-head"><h2>🎮 منوی DARKINO</h2><button class="v9-menu-close" id="v9MenuClose">✕</button></div>
 
     <button class="v9-menu-item" data-v9-action="settings"><span class="v9-menu-icon">⚙️</span><span><b>تنظیمات</b><small>رنگ سایت، اندازه متن و ظاهر</small></span></button>
+    <button class="v9-menu-item" data-v9-action="survey"><span class="v9-menu-icon">📊</span><span><b>نظرسنجی</b><small>نظر و بازخورد کاربران</small></span></button>
     <button class="v9-menu-item" data-v9-action="profile"><span class="v9-menu-icon">👤</span><span><b>پروفایل</b><small>اسم، نام کاربری، سن و بازی مورد علاقه</small></span></button>
     <button class="v9-menu-item" data-v9-action="ai"><span class="v9-menu-icon">🤖</span><span><b>سؤالات شما از سایت</b><small>از دستیار هوشمند درباره DARKINO بپرس</small></span></button>
     <button class="v9-menu-item" data-v9-action="about"><span class="v9-menu-icon">ℹ️</span><span><b>توضیحات سایت</b><small>درباره DARKINO Gaming و سازنده آن</small></span></button>
@@ -2730,6 +2754,25 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
 </div>
 
+<div class="v9-panel" id="v25SurveyPanel" aria-hidden="true">
+  <div class="v9-box">
+    <button class="v9-close" data-v9-close="v25SurveyPanel">✕</button>
+    <span class="v2-kicker">DARKINO COMMUNITY</span>
+    <h2>📊 نظرسنجی و نظر کاربران</h2>
+    <p>نظرت درباره مسیر و محتوای DARKINO را ثبت کن.</p>
+
+    <div class="v25-poll" id="v25Poll">
+      <button type="button" data-poll="guides">🎮 راهنماهای بازی</button>
+      <button type="button" data-poll="ai">🤖 DARKINO AI</button>
+      <button type="button" data-poll="news">📰 اخبار و محتوای جدید</button>
+      <button type="button" data-poll="tools">🛠️ ابزارها و امکانات سایت</button>
+    </div>
+
+    <div id="v25SurveyArea"></div>
+    <div class="v25-note">فعلاً نظرها روی همین مرورگر ذخیره می‌شوند. برای نمایش یکسان نظرها برای همه بازدیدکنندگان، در مرحله بعد باید یک دیتابیس/بک‌اند عمومی به سایت وصل شود.</div>
+  </div>
+</div>
+
 <div class="v9-panel" id="v9AboutPanel" aria-hidden="true">
   <div class="v9-box">
     <button class="v9-close" data-v9-close="v9AboutPanel">✕</button>
@@ -2767,12 +2810,70 @@ document.addEventListener('DOMContentLoaded',function(){
 
   document.querySelectorAll('[data-v9-action]').forEach(b=>b.addEventListener('click',()=>{
     const a=b.dataset.v9Action; closeDrawer();
-    if(a==='settings') $('#settingsOpenBtn')?.click();
+    if(a==='settings') openSettingsPanel();
     if(a==='profile') openPanel('v9ProfilePanel');
+    if(a==='survey') openPanel('v25SurveyPanel');
     if(a==='ai') openPanel('v9AiPanel');
     if(a==='about') openPanel('v9AboutPanel');
     if(a==='aim'){ const p=$('#shootingPanel'); if(p){p.classList.add('open'); p.setAttribute('aria-hidden','false');} }
   }));
+
+  // V25 — mobile settings + community survey.
+  const openSettingsPanel=()=>{
+    const p=$('#settingsPanel');
+    if(p){p.classList.add('open');p.setAttribute('aria-hidden','false');}
+  };
+  $('#mobileSettingsBtn')?.addEventListener('click',openSettingsPanel);
+  $('#mobileSurveyBtn')?.addEventListener('click',()=>openPanel('v25SurveyPanel'));
+
+  const getV25Profile=()=>{
+    try{return JSON.parse(localStorage.getItem('darkinoV2')||'{}')||{}}catch(e){return {}}
+  };
+  const renderV25Survey=()=>{
+    const area=$('#v25SurveyArea'); if(!area)return;
+    const p=getV25Profile();
+    if(!p.name){
+      area.innerHTML=`<div class="v25-profile-required"><strong>👤 برای ثبت نظر اول باید پروفایل بسازی.</strong><span>ثبت نظر بدون پروفایل مجاز نیست.</span><div class="v9-actions"><button type="button" class="v25-inline-btn" id="v25MakeProfile">ساخت پروفایل</button></div></div>`;
+      $('#v25MakeProfile')?.addEventListener('click',()=>{closePanel('v25SurveyPanel');openPanel('v9ProfilePanel');});
+      return;
+    }
+    const username=p.username?` @${p.username.replace(/^@/,'')}`:'';
+    area.innerHTML=`
+      <div class="v25-comment-form">
+        <div class="v25-comment-head"><strong>ثبت نظر</strong><span class="v25-profile-badge">👤 ${escapeV25(p.name)}${username?escapeV25(username):''}</span></div>
+        <textarea id="v25CommentInput" maxlength="500" placeholder="نظرت رو درباره DARKINO بنویس…"></textarea>
+        <div class="v9-actions"><button type="button" id="v25CommentSubmit">ثبت نظر</button></div>
+      </div>
+      <div class="v25-comments" id="v25CommentsList"></div>`;
+    $('#v25CommentSubmit')?.addEventListener('click',()=>{
+      const text=$('#v25CommentInput')?.value.trim();
+      if(!text)return alert('اول نظر خودت را بنویس.');
+      const comments=loadV25Comments();
+      comments.unshift({name:p.name.slice(0,30),username:p.username||'',text:text.slice(0,500),time:new Date().toLocaleString('fa-IR')});
+      localStorage.setItem('darkinoV25Comments',JSON.stringify(comments.slice(0,100)));
+      $('#v25CommentInput').value=''; renderV25Comments();
+    });
+    renderV25Comments();
+  };
+  const escapeV25=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const loadV25Comments=()=>{try{const x=JSON.parse(localStorage.getItem('darkinoV25Comments')||'[]');return Array.isArray(x)?x:[]}catch(e){return []}};
+  const renderV25Comments=()=>{
+    const box=$('#v25CommentsList'); if(!box)return;
+    const comments=loadV25Comments();
+    box.innerHTML=comments.length?comments.map(c=>`<article class="v25-comment"><div class="v25-comment-top"><span class="v25-comment-name">👤 ${escapeV25(c.name)}${c.username?' · @'+escapeV25(c.username.replace(/^@/,'')):''}</span><span class="v25-comment-time">${escapeV25(c.time||'')}</span></div><div class="v25-comment-text">${escapeV25(c.text)}</div></article>`).join(''):'<div class="v25-empty">هنوز نظری ثبت نشده. اولین نظر را تو ثبت کن ✨</div>';
+  };
+  document.querySelectorAll('#v25Poll [data-poll]').forEach(btn=>btn.addEventListener('click',()=>{
+    const p=getV25Profile();
+    if(!p.name){alert('برای شرکت در نظرسنجی باید اول پروفایل بسازی.');closePanel('v25SurveyPanel');openPanel('v9ProfilePanel');return;}
+    document.querySelectorAll('#v25Poll [data-poll]').forEach(x=>x.classList.remove('selected'));
+    btn.classList.add('selected');
+    const votes=JSON.parse(localStorage.getItem('darkinoV25Poll')||'{}');
+    votes[btn.dataset.poll]=(votes[btn.dataset.poll]||0)+1;
+    localStorage.setItem('darkinoV25Poll',JSON.stringify(votes));
+    alert('رأی شما ثبت شد.');
+  }));
+  document.querySelectorAll('[data-v9-close="v25SurveyPanel"]').forEach(b=>b.addEventListener('click',()=>renderV25Survey()));
+  renderV25Survey();
 
   // Profile: name, username, age, favorite game.
   const loadProfile=()=>{
@@ -2794,6 +2895,7 @@ document.addEventListener('DOMContentLoaded',function(){
     localStorage.setItem('darkinoV2',JSON.stringify(p));
     if(typeof renderV2==='function') renderV2();
     closePanel('v9ProfilePanel');
+    renderV25Survey();
     alert('پروفایل با موفقیت ذخیره شد.');
   });
 
