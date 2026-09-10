@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07110d">
+<meta name="description" content="راهنمای کامل تالارهای کلش آف کلنز از TH2 تا TH18؛ ۵ نکته پیشرفت و ۲ استراتژی اتک برای هر تالار.">
+<title>راهنمای تالارها | DARKINO Gaming</title>
+<style>
+:root{
+  --bg:#06100c;--bg2:#091710;--panel:#0b1a13;--panel2:#0e2118;
+  --line:#173a2a;--green:#20e58a;--green2:#0fbf6d;--text:#f3f8f5;
+  --muted:#9db5aa;--gold:#e4b65d;--danger:#ff806d;--shadow:0 18px 50px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(circle at 80% 0%,rgba(32,229,138,.10),transparent 28rem),
+ radial-gradient(circle at 0% 30%,rgba(32,229,138,.05),transparent 24rem),
+ var(--bg);color:var(--text);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.page{width:min(1120px,calc(100% - 28px));margin:auto}
+.top{position:sticky;top:0;z-index:20;background:rgba(4,12,9,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(32,229,138,.13)}
+.topin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;letter-spacing:2px;font-size:23px}
+.logo em{font-style:normal;color:var(--green)}
+.back{color:#b8c9c2;font-size:13px;border:1px solid var(--line);padding:7px 13px;border-radius:999px;transition:.2s}
+.back:hover{border-color:var(--green);color:var(--green)}
+.brandtag{font-size:10px;color:var(--green);letter-spacing:2px;text-transform:uppercase}
+.hero{margin:26px 0 22px;padding:34px 30px;border:1px solid rgba(32,229,138,.22);border-radius:26px;
+background:linear-gradient(135deg,rgba(15,42,29,.95),rgba(7,17,12,.96));box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:280px;height:280px;left:-120px;top:-120px;border-radius:50%;background:rgba(32,229,138,.07);filter:blur(3px)}
+.kicker{font-size:11px;letter-spacing:2px;color:var(--green);font-weight:700}
+.hero h1{font-size:clamp(32px,6vw,62px);line-height:1.25;margin:10px 0 8px;font-weight:900}
+.hero p{margin:0;max-width:760px;color:#c5d4ce;font-size:15px}
+.hero strong{color:var(--green)}
+.section{background:linear-gradient(180deg,rgba(11,26,19,.96),rgba(7,17,12,.96));border:1px solid var(--line);border-radius:24px;padding:24px;margin:18px 0;box-shadow:var(--shadow)}
+.section-title{display:flex;align-items:center;gap:12px;margin:0 0 18px;font-size:22px}
+.section-title:before,.section-title:after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--green));flex:1;opacity:.6}
+.section-title:after{background:linear-gradient(90deg,var(--green),transparent)}
+.th-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.th-card{position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:84px;
+padding:15px 17px;border:1px solid #1a3c2d;border-radius:17px;background:linear-gradient(145deg,#0d2017,#09150f);
+transition:.2s;overflow:hidden}
+.th-card:after{content:"";position:absolute;inset:auto -35px -50px auto;width:100px;height:100px;background:rgba(32,229,138,.06);border-radius:50%}
+.th-card:hover,.th-card.active{transform:translateY(-2px);border-color:var(--green);box-shadow:0 10px 30px rgba(32,229,138,.10)}
+.th-num{font-size:25px;font-weight:900;direction:ltr}
+.th-name{display:block;color:var(--muted);font-size:11px}
+.th-arrow{width:34px;height:34px;border:1px solid rgba(32,229,138,.4);border-radius:50%;display:grid;place-items:center;color:var(--green);font-size:18px}
+.guide-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(32,229,138,.3);background:rgba(32,229,138,.06);
+padding:6px 11px;border-radius:999px;color:var(--green);font-size:11px}
+.focus{margin:10px 0 0;color:#c4d3cd}
+.tips{margin:0;padding-right:23px}
+.tips li{margin:9px 0;color:#d8e2de}
+.tips li::marker{color:var(--green);font-weight:900}
+.strategy{border:1px solid #183b2b;border-radius:20px;background:linear-gradient(145deg,#0d2017,#08130e);padding:18px;margin:13px 0}
+.strategy-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.strategy h3{margin:0;font-size:18px}
+.army-link{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:10px;
+background:rgba(32,229,138,.09);border:1px solid rgba(32,229,138,.35);color:var(--green);font-size:12px;font-weight:800}
+.army-link:hover{background:rgba(32,229,138,.16);border-color:var(--green)}
+.strategy-meta{margin:8px 0 12px;color:#829c90;font-size:11px}
+.steps{margin:0;padding-right:22px}
+.steps li{margin:8px 0;color:#d3dfd9}
+.steps li::marker{color:var(--gold);font-weight:800}
+.tipbox{margin-top:14px;padding:11px 13px;border-right:3px solid var(--green);background:rgba(32,229,138,.045);color:#b8c9c1;font-size:12px;border-radius:8px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 34px}
+.btn{padding:10px 15px;border-radius:12px;border:1px solid var(--line);font-size:12px}
+.btn.primary{background:var(--green);color:#04100a;font-weight:900}
+.btn.secondary{background:transparent;color:#cbd9d3}
+footer{border-top:1px solid var(--line);padding:25px 0 45px;text-align:center;color:#71877d;font-size:11px}
+@media(max-width:760px){
+ .topin{height:62px}
+ .page{width:min(100% - 18px,1120px)}
+ .hero{padding:25px 19px;border-radius:20px}
+ .section{padding:17px;border-radius:19px}
+ .th-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .th-card{min-height:76px;padding:11px 9px;border-radius:14px}
+ .th-num{font-size:19px}
+ .th-name{font-size:9px}
+ .th-arrow{width:28px;height:28px;font-size:14px}
+ .section-title{font-size:18px}
+ .strategy h3{font-size:16px}
+}
+@media(max-width:420px){
+ .th-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .th-card{min-height:72px}
+ .th-num{font-size:17px}
+ .th-arrow{display:none}
+ .hero h1{font-size:34px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="page topin">
+    <a class="back" href="clash-of-clans-guide.html">← همه تالارها</a>
+    <div>
+      <div class="logo">DARK<em>INO</em></div>
+      <div class="brandtag">GAMING GUIDE</div>
+    </div>
+    <span style="width:82px"></span>
+  </div>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="kicker">CLASH OF CLANS · TOWN HALL GUIDE</div>
+    <h1>راهنمای تالارها</h1>
+    <p>تالار موردنظرت را انتخاب کن؛ برای هر TH، <strong>۵ نکته مهم برای پیشرفت سریع‌تر</strong> و <strong>۲ استراتژی واقعی اتک</strong> با آموزش مرحله‌به‌مرحله آماده شده است.</p>
+  </section>
+
+  <section class="section" id="town-halls">
+    <h2 class="section-title">انتخاب تالار مورد نظر</h2>
+    <div class="th-grid" id="thGrid"></div>
+  </section>
+
+  <section class="section" id="guide">
+    <div class="guide-head">
+      <div>
+        <span class="badge">⚔️ راهنمای کامل</span>
+        <h2 id="heading" style="font-size:30px;margin:8px 0 0">راهنمای TH 8</h2>
+        <p class="focus" id="focus"></p>
+      </div>
+      <span class="badge" id="thBadge">TH 8</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">🎯 ۵ نکته مهم برای پیشرفت سریع‌تر</h2>
+    <ol class="tips" id="tips"></ol>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">⚔️ ۲ استراتژی اتک — آموزش ۰ تا ۱۰۰</h2>
+    <p style="color:var(--muted);font-size:12px;margin-top:-5px">«لینک ترکیب» را بزن تا صفحه ترکیب همان اتک باز شود. قبل از استفاده، ترکیب را با سطح نیروها و بالانس فعلی بازی تطبیق بده.</p>
+    <div id="strategies"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">📈 اولویت پیشرفت</h2>
+    <ul class="tips">
+      <li>اول ارتقاهایی را انتخاب کن که ظرفیت ارتش، قدرت نیروها یا کیفیت قهرمان‌ها را بالا می‌برند.</li>
+      <li>بعد سراغ دفاع و ساختمان‌هایی برو که بیشترین اثر را روی سبک بازی‌ات دارند.</li>
+      <li>قبل از رفتن به TH بعدی، هزینه و صف ارتقاها را از قبل برنامه‌ریزی کن.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">⚠️ اشتباهات رایج</h2>
+    <ul class="tips">
+      <li>بدون Scout و تعیین مسیر، یک ترکیب را روی هر چیدمان اجرا نکن.</li>
+      <li>اسپل‌ها را فقط به‌خاطر آماده‌بودن زود مصرف نکن؛ زمان‌بندی مهم‌تر از عجله است.</li>
+      <li>اگر Funnel ناقص است، همه نیروهای اصلی را یکجا وارد نکن.</li>
+    </ul>
+  </section>
+
+  <div class="actions">
+    <a class="btn primary" href="clash-of-clans-guide.html">← بازگشت به صفحه اصلی کلش</a>
+    <a class="btn secondary" href="index.html">⌂ صفحه اصلی DARKINO</a>
+  </div>
+</main>
+
+<footer>DARKINO Gaming — Clash of Clans Town Hall Guide</footer>
+
+<script>
+const guides = {"2":{"focus":"شروع بازی و ساخت پایه‌ای برای پیشرفت سریع","tips":["اول ظرفیت کمپ‌های ارتش را بالا ببر؛ ظرفیت بیشتر مستقیماً قدرت حمله را زیاد می‌کند.","ساختمان‌های منابع و انبارها را زود ارتقا بده تا چرخه جمع‌آوری منابع سریع‌تر شود.","هر بار منابع کافی داری، یکی از سازنده‌ها را مشغول نگه دار.","قبل از تزئینات، ارتقای ساختمان‌های اصلی و ارتش را انجام بده.","برای TH بعدی عجله نکن؛ امکانات مهم همین تالار را تا جای ممکن کامل کن."],"strats":[{"name":"Giants + Archers","steps":["هدف را انتخاب کن و Mortar را پیدا کن.","چند Giant را از سمتی بفرست که نزدیک‌ترین مسیر به دفاع‌های اصلی باشد.","بعد از درگیرشدن دفاع‌ها، Archers را پشت Giantها پخش کن؛ همه را یکجا نریز.","اگر یک بخش از ساختمان‌ها پاک شد، نیروی باقی‌مانده را برای سمت دوم نگه دار.","وقتی دفاع‌های اصلی افتادند، نیروهای باقیمانده را برای پاک‌سازی اطراف استفاده کن.","در پایان، سرعت حمله را با جلوگیری از پراکندگی نیروها بالا نگه دار."],"army":"https://clasharmies.com/armies"},{"name":"Archers + Barbarians","steps":["اول ساختمان‌های بیرونی را بررسی کن تا مسیر نیروها منحرف نشود.","Barbarianها را برای جذب آسیب در چند نقطه وارد کن.","Archers را پشت هر گروه Barbarian قرار بده تا از فاصله امن پاک‌سازی کنند.","در سمتی که دفاع کمتر است فشار بیشتری وارد کن.","نیروهای باقی‌مانده را برای ساختمان‌های دورافتاده نگه دار.","هدف اصلی در این تالار، یادگیری Funnel ساده و مدیریت پراکندگی است."],"army":"https://clasharmies.com/armies"}]},"3":{"focus":"اقتصاد پایه و ساخت ارتش قوی‌تر","tips":["Army Camp را زود ارتقا بده تا ظرفیت حمله بالا برود.","Laboratory را در اولویت قرار بده تا نیروهای اصلی قوی‌تر شوند.","Gold و Elixir را برای ارتقاهای کلیدی نگه دار.","سازنده‌ها را تا حد ممکن همیشه مشغول نگه دار.","چیدمان دفاعی را طوری بچین که منابع و دفاع‌های مهم در یک نقطه جمع نشوند."],"strats":[{"name":"Giants + Archers","steps":["Mortar و Archer Towerهای اصلی را پیدا کن.","Giants را از سمت مناسب وارد کن تا دفاع‌ها را مشغول کنند.","Archers را بعد از قفل‌شدن دفاع‌ها پشت آن‌ها پخش کن.","برای هر سمت فقط به اندازه لازم نیرو خرج کن.","در میانه اتک مسیر حرکت را دوباره بررسی کن و نیروهای باقی‌مانده را به شکاف مناسب بفرست.","در پایان، Archers را برای ساختمان‌های دور از هسته نگه دار."],"army":"https://clasharmies.com/armies"},{"name":"Barbarians + Archers","steps":["یک سمت کم‌خطرتر را برای شروع انتخاب کن.","Barbarians را در چند موج کوتاه وارد کن.","Archers را پشت موج‌ها قرار بده تا ساختمان‌ها را پاک کنند.","اگر Mortar روی یک نقطه متمرکز شد، موج بعدی را کمی جابه‌جا کن.","نیروهای باقی‌مانده را برای پاک‌سازی نگه دار.","بعد از حمله، ببین کدام سمت باعث پراکندگی نیروها شد و دفعه بعد Funnel بهتری بساز."],"army":"https://clasharmies.com/armies"}]},"4":{"focus":"باز کردن امکانات کلیدی و آماده‌شدن برای TH5","tips":["Army Camp و Laboratory را جزو اولین ارتقاها قرار بده.","Storageها را برای هزینه‌های بالاتر TH5 آماده کن.","دفاع‌های اصلی را بعد از ارتقاهای ارتش تقویت کن.","برای هر ارتقا هزینه را از قبل کنار بگذار.","قبل از TH5، نیروها و ساختمان‌های کلیدی را تا حد مناسب بالا ببر."],"strats":[{"name":"Giants + Archers","steps":["Mortar را به‌عنوان تهدید اصلی مشخص کن.","Giants را طوری وارد کن که ابتدا دفاع‌ها را درگیر کنند.","Archers را در پشت آن‌ها و نه روی یک نقطه واحد قرار بده.","بعد از بازشدن مسیر، نیروهای باقی‌مانده را به سمت منابع مهم هدایت کن.","اگر یک سمت سریع پاک شد، از نیروی باقی‌مانده برای سمت مقابل استفاده کن.","در پایان، نیروهای سریع‌تر را برای ساختمان‌های دور نگه دار."],"army":"https://clasharmies.com/armies"},{"name":"Balloons + Archers","steps":["Air Defense را پیدا کن و مسیر Balloonها را از آن دور کن.","Balloons را روی دفاع‌های نزدیک به هم استفاده کن.","Archers را برای ساختمان‌های بیرونی و پاک‌سازی نگه دار.","اگر Balloonها از مسیر اصلی خارج شدند، نیروهای زمینی را بی‌دلیل زود خرج نکن.","بعد از افتادن دفاع‌های اصلی، پاک‌سازی را شروع کن.","هدف این اتک تمرین تشخیص مسیر و زمان‌بندی ورود نیروهاست."],"army":"https://clasharmies.com/armies"}]},"5":{"focus":"پیشرفت سریع و ساخت ارتش پایه","tips":["Laboratory را سریع ارتقا بده و یک ترکیب اصلی را قوی کن.","Army Campها را برای ظرفیت بیشتر جلو بینداز.","Spell Factory را زود باز کن.","Gold و Elixir را بین ارتش و اقتصاد هدفمند خرج کن.","قبل از TH6 کمبودهای مهم ظرفیت و ارتش را برطرف کن."],"strats":[{"name":"Giants + Wizards","steps":["دفاع‌های تک‌هدف و Mortar را شناسایی کن.","Giants را جلو بفرست تا آسیب را جذب کنند.","Wizards را با فاصله مناسب پشت Giantها قرار بده.","نیروها را در یک خط باریک نگه دار تا DPS متمرکز بماند.","وقتی مسیر باز شد، نیروهای باقی‌مانده را وارد بخش منابع و هسته کن.","در پایان، Wizardهای باقی‌مانده را برای پاک‌سازی ساختمان‌های اطراف نگه دار."],"army":"https://clasharmies.com/armies"},{"name":"Giants + Healers","steps":["سمت ورود را طوری انتخاب کن که Giantها سریع به دفاع‌های مهم برسند.","Giantها را وارد کن و بعد Healerها را پشت آن‌ها قرار بده.","Healerها را زیر پوشش دفاعی مناسب نگه دار و از پراکندگی جلوگیری کن.","اگر مسیر منحرف شد، نیروهای بعدی را برای اصلاح Funnel خرج کن.","بعد از افتادن دفاع‌های اصلی، گروه را به هسته هدایت کن.","پاک‌سازی نهایی را با نیروهای باقی‌مانده انجام بده."],"army":"https://clasharmies.com/armies"}]},"6":{"focus":"تقویت ارتش و آماده‌سازی برای TH7","tips":["Army Campها و Laboratory را بالاتر از دفاع‌های فرعی قرار بده.","Healer و ترکیب‌های زمینی را تمرین کن.","Air Defenseها را جدی بگیر.","منابع را برای ارتقای ارتش نگه دار.","قبل از TH7 ظرفیت ارتش و Laboratory را مرتب کن."],"strats":[{"name":"Giants + Wizards + Healer","steps":["اول Air Defense و Mortar را بررسی کن.","Giantها را جلو بفرست تا دفاع‌های زمینی را درگیر کنند.","Wizardها را پشت Giantها و با فاصله وارد کن.","Healer را وقتی مسیر امن شد روی گروه اصلی قرار بده.","اگر گروه اصلی از مسیر خارج شد، یک طرف ساختمان‌های بیرونی را سریع پاک کن.","در پایان، نیروهای باقی‌مانده را برای پاک‌سازی و گرفتن درصد استفاده کن."],"army":"https://clasharmies.com/armies"},{"name":"Balloons + Archers","steps":["Air Defenseها را پیدا کن و از سمتی حمله کن که Balloonها زودتر به آن‌ها برسند.","Balloons را روی دفاع‌ها وارد کن، نه روی ساختمان‌های منابع.","Archers را برای ساختمان‌های زمینی اطراف نگه دار.","نیروها را در چند موج کوچک وارد کن تا یک دفاع همه را متوقف نکند.","بعد از افتادن Air Defenseها، پاک‌سازی را گسترده‌تر کن.","در پایان مسیر امن برای ساختمان‌های باقی‌مانده را انتخاب کن."],"army":"https://clasharmies.com/armies"}]},"7":{"focus":"اولین جهش جدی در قدرت اتک","tips":["Barbarian King و ارتش اصلی را در اولویت قرار بده.","Dark Elixir را برای ارتقاهای اثرگذار نگه دار.","Army Camp و Laboratory را زود ارتقا بده.","Air Defenseها را تقویت کن.","قبل از TH8، ارتش و امکاناتی را که واقعاً استفاده می‌کنی تقویت کن."],"strats":[{"name":"Mass Dragons","steps":["Air Defenseها و Air Sweeperها را علامت‌گذاری کن.","دو Dragon در کناره‌ها برای ساختن Funnel قرار بده.","بعد از پاک‌شدن کناره‌ها، بقیه Dragons را در یک خط از سمت مناسب وارد کن.","Clan Castle و قهرمان را برای نقطه‌ای نگه دار که مسیر Dragonها را کامل می‌کند.","توانایی‌ها/اسپل‌های موجود را در بخش متراکم دفاع‌ها استفاده کن، نه ابتدای حمله بدون نیاز.","در انتها Dragonهای جداشده را برای پاک‌سازی ساختمان‌های باقی‌مانده هدایت کن."],"army":"https://clasharmies.com/armies"},{"name":"Hog Riders","steps":["مسیر دفاع‌ها را از روی چیدمان مشخص کن.","قبل از Hogها، ساختمان‌های بیرونی مزاحم را تا حد لازم پاک کن.","Hogها را به‌صورت موجی روی چند دفاع نزدیک وارد کن تا سرعتشان حفظ شود.","Heal را برای بخش‌های متراکم و محل آسیب هم‌زمان نگه دار.","اگر یک سمت سریع‌تر پاک شد، موج بعدی را از سمت مناسب‌تر وارد کن.","در پایان، نیروهای پاک‌سازی را برای ساختمان‌های باقی‌مانده نگه دار."],"army":"https://clasharmies.com/armies"}]},"8":{"focus":"پیشرفت سریع، ارتش قوی و یادگیری اتک‌های تخصصی","tips":["Laboratory و Army Campها را در اولویت قرار بده.","Dark Elixir را برای King و نیروهای اصلی نگه دار.","Clan Castle را ارتقا بده.","همیشه حداقل یک سازنده را مشغول نگه دار.","قبل از TH9 نیروهای مورد استفاده و ساختمان‌های کلیدی را قوی کن."],"strats":[{"name":"Hog Riders + Heal","steps":["یک مسیر حلقه‌ای از دفاع‌ها برای Hogها پیدا کن.","قبل از شروع، محل Bombهای احتمالی و نقاط تراکم دفاعی را در نظر بگیر.","Hogها را از سمتی وارد کن که چند دفاع نزدیک به هم دارند.","Heal را کمی جلوتر از محل ورود Hogها قرار بده تا هنگام رسیدن به آسیب اصلی آماده باشد.","اگر مسیر به دو شاخه تقسیم شد، نیروها را طوری تقسیم کن که یک گروه زودتر تمام نشود.","در پایان، نیروهای پاک‌سازی را برای ساختمان‌های بیرونی نگه دار."],"army":"https://clasharmies.com/armies/troops/hog-rider"},{"name":"GoWiPe","steps":["محل ورود به هسته و مسیر P.E.K.K.A را مشخص کن.","Golemها را برای جذب آسیب در ورودی قرار بده.","Wizardها را پشت Golemها برای ساختن Funnel وارد کن.","P.E.K.K.Aها را بعد از شکل‌گیری مسیر اصلی به سمت هسته بفرست.","اسپل‌های پشتیبان را برای بخش‌هایی نگه دار که گروه اصلی بیشترین آسیب را می‌گیرد.","در انتها نیروهای باقیمانده را روی ساختمان‌های دورافتاده استفاده کن."],"army":"https://clasharmies.com/armies/troops/hog-rider"}]},"9":{"focus":"سه‌ستاره، قهرمان‌ها و پیشرفت منظم","tips":["Archer Queen را مرتب ارتقا بده.","Laboratory و Army Campها را جلو بینداز.","Clan Castle را برای ظرفیت و پشتیبانی بهتر ارتقا بده.","قبل از هر اتک مسیر Queen یا گروه اصلی را مشخص کن.","برای TH10 عجله نکن و ارتقاهای کلیدی را جلو بینداز."],"strats":[{"name":"Queen Charge + Hog Riders","steps":["سمتی را انتخاب کن که Queen بیشترین ارزش را می‌تواند بگیرد.","Queen و Healerها را برای ساختن Funnel و حذف یک بخش دفاعی وارد کن.","مسیر Queen را طوری تنظیم کن که از بخش اصلی خارج نشود.","بعد از ایجاد مسیر، Hogها را در امتداد دفاع‌های باقی‌مانده وارد کن.","Healها را برای نقاطی که چند دفاع هم‌زمان آسیب می‌زنند نگه دار.","در پایان، نیروهای پاک‌سازی را روی ساختمان‌های باقی‌مانده استفاده کن."],"army":"https://www.clasharmies.com/armies"},{"name":"LavaLoon","steps":["Air Defenseها و مسیر Air Sweeperها را بررسی کن.","Lava Houndها را برای تانک‌کردن مسیر هوایی وارد کن.","Balloonها را پشت مسیر Houndها و روی دفاع‌های کلیدی پخش کن.","اسپل‌های سرعت/پشتیبانی را جایی استفاده کن که Balloonها به چند دفاع متوالی می‌رسند.","اگر یک Hound زودتر تمام شد، Balloonها را روی مسیر دوم متمرکز کن.","Minionها و نیروهای پاک‌سازی را تا زمانی که ساختمان‌های خطرناک افتاده‌اند نگه دار."],"army":"https://clasharmies.com/armies/troops/hog-rider"}]},"10":{"focus":"باز کردن اتک‌های ترکیبی و پیشرفت سریع ارتش","tips":["Laboratory را اولویت بده و یک ترکیب اصلی را کامل کن.","Clan Castle و Army Campها را زود ارتقا بده.","قهرمان‌ها را مرتب ارتقا بده.","Siege Machineها را وارد برنامه تمرین کن.","قبل از TH11 حداقل یک ترکیب زمینی و یک ترکیب هوایی قابل‌اعتماد داشته باش."],"strats":[{"name":"Hog Miner Hybrid","steps":["محل Town Hall و دفاع‌های کلیدی را مشخص کن.","Queen Charge را از سمتی شروع کن که ارزش بالایی دارد و مسیرش قابل‌کنترل است.","یک Funnel دوم با King یا نیروهای کمکی بساز تا گروه اصلی منحرف نشود.","Miners و Hog Riders را در یک محور و با فاصله کوتاه وارد کن.","Heal و Rage را بر اساس آسیب واقعی گروه استفاده کن؛ اسپل را قبل از رسیدن نیروها هدر نده.","در بخش پایانی، Champion/نیروهای پاک‌سازی را برای دفاع‌های عقب نگه دار.","بعد از اتک، مسیر انحراف Miners/Hogs را بررسی کن و همان اشتباه را تکرار نکن."],"army":"https://clasharmies.com/armies/21"},{"name":"BoWitch","steps":["ورودی اصلی و مسیر رسیدن به هسته را انتخاب کن.","Golemها را برای ایجاد تانک و بازکردن ورودی قرار بده.","Witchها و Bowlers را پشت تانک‌ها وارد کن تا فشار اصلی شکل بگیرد.","فانل دو طرف را کامل کن تا گروه اصلی وسط بماند.","اسپل‌های پشتیبان را در هسته و نقاط متراکم استفاده کن.","توانایی قهرمان‌ها را برای بخش خطرناک‌تر نگه دار و در پایان پاک‌سازی کن."],"army":"https://clasharmies.com/armies/21"}]},"11":{"focus":"هماهنگی قهرمان‌ها و فشار روی هسته","tips":["Grand Warden را وارد برنامه ثابت ارتقا کن.","Laboratory و Army Campها را عقب نینداز.","Town Hall و دفاع‌های کلیدی را قبل از هر اتک بررسی کن.","Clan Castle را ارتقا بده.","منابع را روی یک یا دو ترکیب اصلی متمرکز کن."],"strats":[{"name":"Electro Dragons","steps":["چند ساختمان زنجیره‌ای را از قبل پیدا کن.","دو طرف مسیر را با نیروهای کوچک Funnel کن.","E-Dragها را در یک خط کنترل‌شده وارد کن تا از هم جدا نشوند.","Warden و قهرمان‌ها را همراه مسیر اصلی قرار بده.","اسپل‌های پشتیبان را روی بخش‌هایی بگذار که چند دفاع هم‌زمان فشار می‌آورند.","اگر یک E-Drag از مسیر خارج شد، نیروهای باقی‌مانده را برای حفظ مسیر اصلی پخش نکن.","پاک‌سازی را بعد از افتادن دفاع‌های اصلی شروع کن."],"army":"https://clasharmies.com/armies/heroes/archer-queen"},{"name":"Hybrid","steps":["Queen Charge را روی بخشی اجرا کن که می‌تواند دفاع و مسیر را هم‌زمان باز کند.","King را برای Funnel سمت مقابل استفاده کن.","Miners و Hogها را وقتی مسیر بین دو Funnel مشخص شد وارد کن.","Warden را همراه گروه اصلی قرار بده و توانایی‌اش را برای نقطه پرخطر نگه دار.","Heal/Rage را با ورود به هسته هماهنگ کن.","Champion را برای بخش عقب یا دفاع‌های باقی‌مانده نگه دار."],"army":"https://clasharmies.com/armies/heroes/archer-queen"}]},"12":{"focus":"کنترل هسته و استفاده درست از Siege Machine","tips":["Siege Workshop را در برنامه پیشرفت قرار بده.","Laboratory، Army Camp و Clan Castle را جلو بینداز.","Grand Warden و سایر قهرمان‌ها را منظم ارتقا بده.","مسیر رسیدن به Town Hall و هسته را قبل از حمله مشخص کن.","منابع کمیاب را روی ترکیب اصلی خرج کن."],"strats":[{"name":"Yeti Smash","steps":["سمت ورود و مسیر هسته را از روی چیدمان مشخص کن.","Funnel دو طرف را با قهرمان‌ها یا نیروهای کمکی بساز.","Yetiها و نیروهای اصلی را در مسیر باریک و مستقیم وارد کن.","Siege Machine را با توجه به مسیر هسته انتخاب و زمان‌بندی کن.","Warden و اسپل‌های پشتیبان را برای هسته و بخش‌های متراکم نگه دار.","بعد از شکستن هسته، نیروهای باقی‌مانده را برای لبه‌ها و دفاع‌های عقب استفاده کن.","اگر گروه از هسته خارج شد، نیروی جدید را برای اصلاح مسیر خرج نکن مگر اینکه ارزش داشته باشد."],"army":"https://clasharmies.com/armies/234"},{"name":"Hybrid","steps":["Queen Charge را برای حذف بخش ارزشمند و ساخت مسیر اجرا کن.","Funnel دوم را با King یا نیروی کمکی کامل کن.","Hog و Miner را در یک مسیر مشترک وارد کن.","Heal را روی نقاط آسیب متراکم و Rage را برای لحظات ورود به هسته نگه دار.","Warden را با گروه اصلی حرکت بده و توانایی را در نقطه بحرانی استفاده کن.","Champion را برای دفاع‌های عقب و Cleanup نگه دار."],"army":"https://clasharmies.com/armies/234"}]},"13":{"focus":"قهرمان‌ها، تجهیزات و اجرای دقیق‌تر","tips":["قهرمان‌ها و تجهیزات پرکاربرد را در اولویت قرار بده.","Laboratory و Army Campها را جلو بینداز.","ترکیب را بر اساس چیدمان انتخاب کن.","محل استفاده از توانایی‌ها را قبل از حمله مشخص کن.","منابع را روی نیروها و تجهیزات پرکاربرد متمرکز کن."],"strats":[{"name":"Queen Charge Hybrid","steps":["Queen را از سمتی وارد کن که بتواند دفاع‌های مهم و مسیر Funnel را بگیرد.","Healerها را به‌موقع وصل کن و مسیر Queen را با پاک‌سازی محدود کنترل کن.","King یا نیروهای جانبی را برای Funnel سمت مقابل استفاده کن.","Miners و Hogs را وقتی دو طرف بسته شد، در یک محور وارد کن.","Warden را با گروه اصلی همراه کن و Heal/Rage را با هسته هماهنگ کن.","Champion را برای دفاع‌های عقب یا پاک‌سازی نگه دار.","در بازبینی اتک، زمان شروع Hybrid را با زمان پایان Queen مقایسه کن."],"army":"https://cocmap.com/clash-of-clans/army/th10-ca-1249"},{"name":"Blizzard/Smash","steps":["نقطه ارزشمند هسته را برای شروع مشخص کن.","گروه شروع را برای حذف بخش حساس و ساخت مسیر استفاده کن.","بعد از بازشدن مسیر، گروه اصلی را مستقیم به سمت هسته وارد کن.","فانل را قبل از ورود کامل تکمیل کن تا نیروها پخش نشوند.","اسپل‌ها را برای هسته و دفاع‌های با DPS بالا نگه دار.","پس از هسته، Champion و نیروهای باقی‌مانده را برای بخش عقب استفاده کن."],"army":"https://clasharmies.com/armies/339"}]},"14":{"focus":"مدیریت ارتقا و اتک‌های پایدار","tips":["Pet House و ارتقاهای مرتبط با قهرمان‌ها را جدی بگیر.","Laboratory و نیروهای اصلی اتک را عقب نینداز.","Clan Castle و Army Campها را ارتقا بده.","ارتقاها را با سبک اتکت هماهنگ کن.","قبل از TH15 یک ترکیب زمینی و یک ترکیب هوایی را تمرین کن."],"strats":[{"name":"Queen Charge Hybrid","steps":["سمتی را انتخاب کن که Queen بتواند مسیر طولانی اما قابل‌کنترل بسازد.","Queen و Healerها را وارد کن و Funnel اطراف را با کمترین نیروی ممکن بساز.","King سمت دیگر مسیر را پاک کند تا Hybrid وسط بماند.","Miners و Hogs را روی مسیر مشخص وارد کن.","Warden را همراه گروه اصلی نگه دار و اسپل‌های پشتیبان را در هسته زمان‌بندی کن.","Champion را برای دفاع‌های عقب نگه دار.","اگر Queen بیش از حد منحرف شد، اولویت را به حفظ مسیر Hybrid بده."],"army":"https://cocmap.com/clash-of-clans/army/th10-ca-1249"},{"name":"Dragon Riders + Dragons","steps":["Air Defenseها، Sweepers و مسیر دفاع‌های ضدهوایی را مشخص کن.","دو طرف Funnel هوایی را با Dragon یا نیروهای کمکی بساز.","Dragons را در یک خط وارد کن و Dragon Riders را پشت مسیر اصلی قرار بده.","Warden را همراه گروه اصلی ببر و توانایی را برای بخش متراکم نگه دار.","اسپل‌ها را نزدیک Scatter/Inferno/هسته زمانی استفاده کن که گروه واقعاً وارد محدوده شود.","Champion را برای پاک‌سازی یا دفاع‌های عقب نگه دار."],"army":"https://clasharmies.com/armies/1083"}]},"15":{"focus":"اتک رقابتی و تصمیم‌گیری قبل از شروع","tips":["Laboratory، قهرمان‌ها و نیروهای اصلی را بر اساس ترکیب واقعی خودت ارتقا بده.","قبل از اتک Scout کامل انجام بده.","تجهیزات قهرمان‌ها را بر اساس نقش انتخاب کن.","یک ترکیب اصلی و یک ترکیب جایگزین داشته باش.","بعد از هر اتک یک اشتباه مشخص را اصلاح کن."],"strats":[{"name":"Root Riders + Valkyries","steps":["ابتدا Town Hall و بخش‌های متراکم هسته را پیدا کن و مسیر ورود را انتخاب کن.","دو طرف ورودی را با Queen/King یا نیروهای کمکی Funnel کن.","Root Riderها را در محور اصلی وارد کن تا مسیر دیوارها و دفاع‌ها را باز کنند.","Valkyrieها را بلافاصله در پشت گروه اصلی وارد کن تا از شکاف ایجادشده استفاده کنند.","Warden را همراه گروه اصلی نگه دار و توانایی را برای بخش پرخطر ذخیره کن.","Champion را برای دفاع‌های عقب یا جناحی نگه دار.","در Cleanup، نیروهای کناره را فقط بعد از امن‌شدن مسیر اصلی وارد کن.","بعد از حمله بررسی کن آیا Root Riderها به دلیل Funnel ناقص از مسیر اصلی خارج شدند یا نه."],"army":"https://www.clasharmies.com/armies/333"},{"name":"Hydra","steps":["Air Defenseها و Sweepers را بررسی کن و بهترین محور ورود را انتخاب کن.","یک Funnel در یک سمت با King/Queen یا نیروی کوچک بساز.","Dragons را در یک خط و سپس Dragon Riders را وارد کن تا مسیر هوایی واحد بماند.","Warden را روی گروه اصلی قرار بده و توانایی را برای هسته نگه دار.","اسپل‌های پشتیبان را بر اساس دفاع‌های واقعی زمان‌بندی کن.","Champion را برای دفاع‌های عقب یا پاک‌سازی نگه دار.","در پایان، نیروهای کوچک را روی ساختمان‌های دورافتاده پخش کن."],"army":"https://clanwarden.com/armies/th18/hydra"}]},"16":{"focus":"اجرای دقیق و هماهنگی چندمرحله‌ای","tips":["ارتقاهایی را انتخاب کن که مستقیماً روی ترکیب اصلی اثر دارند.","قهرمان‌ها و تجهیزات اصلی را در برنامه نگه دار.","مسیر اصلی و مسیر پشتیبان را قبل از حمله مشخص کن.","از بازپخش‌ها برای اصلاح زمان‌بندی استفاده کن.","یک مسیر پیشرفت مشخص برای ارتش داشته باش."],"strats":[{"name":"Root Rider Smash","steps":["سمت Town Hall و مسیر هسته را مشخص کن.","Funnel دو طرف را قبل از ورود گروه اصلی کامل کن.","Root Riderها را روی محور اصلی بفرست تا دیوارها و دفاع‌های مقابل را بشکنند.","نیروهای پشتیبان را پشت آن‌ها نگه دار تا گروه اصلی زود جدا نشود.","Warden را با گروه اصلی همراه کن و توانایی را برای فشار هسته ذخیره کن.","Champion را برای جناح عقب یا دفاع‌های مزاحم نگه دار.","اسپل‌ها را در نقاط تراکم واقعی استفاده کن و بعد از افت هسته وارد Cleanup شو."],"army":"https://www.clasharmies.com/armies/378"},{"name":"Hydra","steps":["Sweepers و Air Defenseهای مسیر را مشخص کن.","یک Funnel هوایی در دو سمت ایجاد کن.","Dragons و Dragon Riders را در یک خط وارد کن تا مسیر مشترک داشته باشند.","Warden را با بخش مرکزی همراه کن و توانایی را برای بخش سنگین ذخیره کن.","اسپل‌ها را نزدیک دفاع‌های با ارزش و زمانی که نیروها وارد محدوده شده‌اند استفاده کن.","Champion را برای عقب‌مانده‌ها نگه دار و در پایان Cleanup را کامل کن."],"army":"https://clanwarden.com/armies/th18/hydra"}]},"17":{"focus":"تنوع اتک و خواندن چیدمان","tips":["یک ترکیب را بهترین همیشگی فرض نکن.","ارتقاها را بر اساس دو یا سه ترکیب مورد علاقه اولویت‌بندی کن.","قبل از حمله مسیر ورود و نقاط انحراف را مشخص کن.","از بازپخش‌ها برای اصلاح زمان‌بندی استفاده کن.","ارتقای ارتش و قهرمان‌ها را جلوتر از گزینه‌های کم‌استفاده قرار بده."],"strats":[{"name":"Root Riders + Valkyries","steps":["Town Hall و مسیر اصلی را بررسی کن و نقطه ورود را انتخاب کن.","Funnel دو طرف را با Heroها و نیروهای جانبی بساز.","Root Riderها را در چند موج کنترل‌شده وارد کن تا مسیر اصلی باز شود.","Valkyrieها و نیروهای پشتیبان را پشت موج اصلی قرار بده.","Warden را همراه هسته حرکت بده و توانایی را برای بیشترین فشار نگه دار.","Champion را برای بخش عقب یا دفاع‌های باقی‌مانده استفاده کن.","Cleanup را فقط وقتی مسیر اصلی تثبیت شد شروع کن.","اگر نیروها تقسیم شدند، به جای ریختن همه نیروها، از واحدهای باقی‌مانده برای نجات درصد استفاده کن."],"army":"https://www.clasharmies.com/armies/333"},{"name":"Hydra","steps":["مسیر Sweepers و دفاع‌های ضدهوایی را بررسی کن.","Funnel هوایی را در دو سمت بساز تا گروه وسط بماند.","Dragons را ابتدا و Dragon Riders را در امتداد همان مسیر وارد کن.","Warden را با گروه اصلی همراه کن و توانایی را در نقطه بحرانی استفاده کن.","اسپل‌ها را با رسیدن گروه به هسته یا دفاع‌های متراکم زمان‌بندی کن.","Champion و نیروهای کوچک را برای عقب نگه دار.","در پایان، ساختمان‌های دورافتاده را با Cleanup جمع کن."],"army":"https://clanwarden.com/armies/th18/hydra"}]},"18":{"focus":"متای در حال تغییر و انتخاب اتک بر اساس چیدمان","tips":["متای TH18 را ثابت فرض نکن؛ بالانس‌ها می‌توانند ارزش ترکیب‌ها را تغییر دهند.","اول ارتقاهای مستقیم روی ترکیب اصلی را انجام بده.","چیدمان را کامل Scout کن.","یک ترکیب دوم آماده داشته باش.","بعد از هر تغییر بالانس چند اتک آزمایشی انجام بده."],"strats":[{"name":"Root Riders + پشتیبانی زمینی","steps":["چیدمان را کامل Scout کن و Town Hall، هسته و دفاع‌های کلیدی را مشخص کن.","سمت ورود را طوری انتخاب کن که Root Riderها بعد از شکستن اولین لایه به هسته برسند.","Funnel دو طرف را با قهرمان‌ها و نیروهای جانبی بساز.","Root Riderها را روی محور اصلی وارد کن و پشتیبانی زمینی را بلافاصله پشت آن‌ها قرار بده.","Warden و توانایی‌های قهرمان‌ها را برای بخش سنگین هسته زمان‌بندی کن.","Champion را برای دفاع‌های عقب یا جناحی نگه دار.","بعد از عبور گروه اصلی از هسته، Cleanup را مرحله‌ای شروع کن.","TH18 متغیر است؛ اگر چیدمان با این مسیر سازگار نبود، استراتژی دوم را انتخاب کن."],"army":"https://clasharmies.com/armies"},{"name":"Hydra","steps":["Sweepers و مسیر دفاع‌های هوایی را کامل بررسی کن.","Funnel هوایی را با نیروهای جانبی بساز تا Dragons و Riders از هم جدا نشوند.","Dragons را در خط اصلی وارد کن و Dragon Riders را پشت/کنار مسیر اصلی قرار بده.","Warden را با هسته گروه حرکت بده و توانایی را برای بخش بحرانی نگه دار.","اسپل‌ها را بر اساس آسیب واقعی و موقعیت دفاع‌ها استفاده کن.","Champion را برای عقب و دفاع‌های باقی‌مانده نگه دار.","Cleanup را فقط پس از مشخص‌شدن مسیر امن انجام بده.","بعد از به‌روزرسانی‌های بالانس، ترکیب را دوباره بررسی کن چون متای TH18 در حال تغییر است."],"army":"https://clanwarden.com/armies/th18/hydra"}]}};
+
+const params = new URLSearchParams(location.search);
+let th = parseInt(params.get('th') || '8', 10);
+if (!guides[th]) th = 8;
+const g = guides[th];
+
+document.title = 'راهنمای TH ' + th + ' | DARKINO Gaming';
+document.getElementById('heading').textContent = 'راهنمای TH ' + th;
+document.getElementById('thBadge').textContent = 'TH ' + th;
+document.getElementById('focus').innerHTML = '<strong>تمرکز این مرحله:</strong> ' + g.focus;
+
+document.getElementById('tips').innerHTML = g.tips.map(x => '<li>' + x + '</li>').join('');
+
+const strategyNote = (name) => {
+  if (name.includes('Root Rider')) return 'Root Riderها مسیر دیوارها را ساده می‌کنند، اما Funnel ناقص می‌تواند مسیر گروه را از هدف اصلی دور کند.';
+  if (name.includes('Hydra')) return 'Dragons و Dragon Riders باید تا حد ممکن مسیر مشترک داشته باشند؛ پراکندگی زودهنگام قدرت فشار را کم می‌کند.';
+  if (name.includes('Hybrid')) return 'زمان شروع Hybrid را با مسیر Queen و بازشدن Funnel هماهنگ کن تا Cleanup زمان کافی داشته باشد.';
+  return 'اسپل‌ها و نیروهای اصلی را بر اساس مسیر واقعی حمله زمان‌بندی کن، نه صرفاً بر اساس آماده‌بودن آن‌ها.';
+};
+
+document.getElementById('strategies').innerHTML = g.strats.map((s, i) => `
+  <article class="strategy">
+    <div class="strategy-head">
+      <h3>${i + 1}. ${s.name}</h3>
+      <a class="army-link" href="${s.army}" target="_blank" rel="noopener noreferrer">🔗 لینک ترکیب</a>
+    </div>
+    <div class="strategy-meta">آموزش ۰ تا ۱۰۰ · آماده‌سازی → Funnel → ورود → کنترل هسته → Cleanup</div>
+    <ol class="steps">${s.steps.map(x => '<li>' + x + '</li>').join('')}</ol>
+    <div class="tipbox"><b>⚠️ نکته کلیدی:</b> ${strategyNote(s.name)}</div>
+  </article>
+`).join('');
+
+const grid = document.getElementById('thGrid');
+grid.innerHTML = Array.from({length:17}, (_, i) => i + 2).map(n => `
+  <a class="th-card ${n === th ? 'active' : ''}" href="clash-town-hall.html?th=${n}" aria-label="راهنمای TH ${n}">
+    <div>
+      <span class="th-num">TH ${n}</span>
+      <span class="th-name">تالار ${n}</span>
+    </div>
+    <span class="th-arrow">‹</span>
+  </a>
+`).join('');
+
+if (window.location.search) {
+  setTimeout(() => document.getElementById('guide').scrollIntoView({behavior:'smooth', block:'start'}), 80);
+}
+</script>
+</body>
+</html>
